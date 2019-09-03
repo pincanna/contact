@@ -1,0 +1,20 @@
+h1 Success
+p This is just a demo. No email was actually sent.
+hr
+p[style="color:red;"]
+  strong This message would have been sent to #{@recipient}
+dl
+  dt Category
+  dd
+    == [params["category"], @recipient].join('&mdash;')
+
+  dt Name
+  dd == params["name"]
+
+  dt Email
+  dd == params["email"]
+
+  dt Message
+  dd == params["message"]
+
+a href="/" Go Back
